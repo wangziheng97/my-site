@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王梓蘅的个人主页</title>
+    <style>
+        body {
+            font-family: "KaiTi", serif;
+            background-color: #f9f5e3;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #8d6449;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f4e1c1;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #e0c6a0;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            border-bottom: 2px solid #e0c6a0;
+            padding-bottom: 5px;
+        }
+        footer {
+            background-color: #8d6449;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .editable {
+            background-color: #fff8e1;
+            padding: 10px;
+            border: 1px solid #e0c6a0;
+            border-radius: 5px;
+        }
+        .sidebar {
+            width: 200px;
+            float: left;
+        }
+        .content {
+            margin-left: 220px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            background-color: #f4e1c1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            background-color: #e0c6a0;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>王梓蘅的个人主页</h1>
+        <p>研究生 | 专注科研的学生</p>
+        <p>联系电话：12345667899</p>
+    </header>
+    <nav>
+        <a href="#projects">项目作品</a>
+        <a href="#skills">技能</a>
+        <a href="#education">教育背景</a>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#section1">第一章 导论</a></li>
+                <li><a href="#section2">第二章 导论</a></li>
+                <li><a href="#section3">第三章 导论</a></li>
+                <li><a href="#section4">第四章 导论</a></li>
+                <li><a href="#section5">第五章 导论</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <section id="projects">
+                <h2>项目作品</h2>
+                <div class="editable" contenteditable="true">
+                    <p>在此填写您的项目作品...</p>
+                </div>
+            </section>
+            <section id="skills">
+                <h2>技能</h2>
+                <div class="editable" contenteditable="true">
+                    <p>在此填写您的技能...</p>
+                </div>
+            </section>
+            <section id="education">
+                <h2>教育背景</h2>
+                <div class="editable" contenteditable="true">
+                    <p>在此填写您的教育背景...</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 王梓蘅. 保留所有权利.</p>
+    </footer>
+</body>
+</html>
