@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王梓蘅的个人主页</title>
+    <style>
+        body {
+            font-family: "KaiTi", serif;
+            background-color: #f9f5e3;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #8d6449;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f4e1c1;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #e0c6a0;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            border-bottom: 2px solid #e0c6a0;
+            padding-bottom: 5px;
+        }
+        footer {
+            background-color: #8d6449;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .editable {
+            background-color: #fff8e1;
+            padding: 10px;
+            border: 1px solid #e0c6a0;
+            border-radius: 5px;
+        }
+        .sidebar {
+            width: 200px;
+            float: left;
+        }
+        .content {
+            margin-left: 220px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            background-color: #f4e1c1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            background-color: #e0c6a0;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .avatar{
+        width:100px; height:100px;
+        margin:16px auto 20px;   /* ← 水平居中容器 */
+        border-radius:50%;
+        overflow:hidden;
+        box-shadow:0 6px 18px rgba(0,0,0,.15);
+        }
+
+        .avatar img{
+        width:100%; height:100%;
+        object-fit:contain;              /* 不裁切，整图缩进 */
+        display:block;                   /* 去掉默认内联空隙 */
+        background:transparent;          /* 透明，不要白底 */
+        /* padding:0;  不要内边距 */
+        }
+
+        /* 关键：把每行做成两列：左“标签列”+ 右“内容列” */
+        .rows{
+            display:grid;
+            grid-template-columns:max-content 1fr; /* 左列跟随“项目贡献：”宽度 */
+            column-gap:.5em;
+            row-gap:.25em;
+        }
+        .rows .label{ white-space:nowrap; }       /* 防止“项目贡献：”换行 */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>王梓蘅的个人主页</h1>
+        <div class="avatar">
+            <img src="./me.jpg" alt="证件照">
+        </div>
+        <p>研究生 | 有丰富的项目经验</p>
+        <p>联系电话：15543097832</p>
+    </header>
+    <div class="container">
+        <div class="content">
+            <section id="projects">
+                <h2>项目作品</h2>
+                <div class="editable" contenteditable="true">
+                    <p>A：项目名称：基于电力大数据的乡村产业能效分析与结构优化决策系统研究</p>
+                    <p>工作时间：2023.5-2024.11</p>
+                    <div class="rows">
+                        <div class="label">项目贡献：</div><div>1）通过分析吉林省乡村用电数据提供乡村返贫预警</div>
+                        <div class="label"></div><div>2）通过乡村用电数据关联各乡村产业之间的联系</div>
+                        <div class="label"></div><div>3）通过乡村用电数据分析各乡村产业的能效水平</div>
+                        <div class="label"></div><div>4）搭建乡村振兴平台</div>
+                    </div>
+                    <!-- 让这个区域不可编辑，点击即可跳转 -->
+                    <span contenteditable="false">
+                    <a href="http://120.26.237.64:5001/" target="_blank" rel="noopener noreferrer">
+                        项目作品：乡村振兴平台
+                    </a></span>
+
+                    <p>B：项目名称：基于电力大数据的吉林省产业集群能效全景分析及优化路径研究</p>
+                    <p>工作时间：2023.7-2024.8</p>
+                    <div class="rows">
+                        <div class="label">项目贡献：</div><div>1）通过挖掘吉林省各地区的用电数据，分析其用能结构和各产业经济发展趋势</div>
+                        <div class="label"></div><div>2）通过吉林省各区域用电数据分析各产业之间的能效水平</div>
+                        <div class="label"></div><div>3）撰写吉林省和九个地级市的电力看产业发展专题报告</div>
+                    </div>
+
+                    <p>C:系统名称：政策新闻信息池</p>
+                    <p>工作时间：2024.7-2024.12</p>
+                    <div class="rows">
+                        <div class="label">项目贡献：</div><div>1）查找各大新闻平台，确定平台的底层架构及基础样式</div>
+                        <div class="label"></div><div>2）确定各电气新闻的新闻平台网址，方便后续进行新闻爬取</div>
+                        <div class="label"></div><div>3）将爬取到的新闻放进json文件，实现前端读取及定向搜索功能</div>
+                        <div class="label"></div><div>4）搭建政策新闻信息池平台</div>
+                    </div>
+                    <!-- 让这个区域不可编辑，点击即可跳转 -->
+                    <span contenteditable="false">
+                    <a href="http://120.26.237.64:5000/" target="_blank" rel="noopener noreferrer">
+                        项目作品：政策新闻信息池
+                    </a></span>
+
+                    <p>D:项目名称：吉林省新兴产业促进新能源消纳全景分析与路径优化研究</p>
+                    <p>工作时间：2024.7-至今</p>
+                    <div class="rows">
+                        <div class="label">项目贡献：</div><div>1）通过分析吉林省各产业用电负荷数据，研究吉林省各新兴产业用能特性及其对新能源消纳的影响</div>
+                        <div class="label"></div><div>2）搭建风光出力预测模型及短期负荷预测模型，对未来24h的风光出力及各变电站下行负荷进行精准预测</div>
+                        <div class="label"></div><div>3）完成现行配电网网架前端搭建</div>
+                        <div class="label"></div><div>4）设计并搭建完善的新兴产业促进新能源消纳平台</div>
+                    </div>
+                    <!-- 让这个区域不可编辑，点击即可跳转 -->
+                    <span contenteditable="false">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        项目作品：新兴产业促进新能源消纳平台
+                    </a>
+                    </span>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>技能</h2>
+                <div class="editable" contenteditable="true">
+                    <p>熟练掌握C语言、Python语言、前端可视化开发语言（html、css、JavaScript）等编程语言</p>
+                    <p>熟练掌握word、excel、ppt等办公室软件</p>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>成果展示</h2>
+                <div class="editable" contenteditable="true">
+                    <span contenteditable="false">
+                    <p>2017.09获全国计算机等级考试二级合格证书
+                        <a href="全国计算机等级考试二级合格证书.jpg" target="_blank" rel="noopener noreferrer">全国计算机等级考试二级合格证书</a>
+                    </span>
+                    </p>
+                    <p>2024.03获全国计算机等级考试三级合格证书
+                        <span contenteditable="false">
+                        <a href="全国计算机等级考试三级合格证书.jpg" target="_blank" rel="noopener noreferrer">全国计算机等级考试三级合格证书</a>
+                        </span>
+                    </p>
+                    <p>2018.11获第十届吉林省大学生数学竞赛二等奖
+                        <span contenteditable="false">
+                        <a href="第十届吉林省大学生数学竞赛证书.jpg" target="_blank" rel="noopener noreferrer">第十届吉林省大学生数学竞赛证书</a>
+                        </span>
+                    </p>
+                    <p>2018.12获2018年高教社杯全国大学生数学建模竞赛吉林赛区一等奖
+                        <span contenteditable="false">
+                        <a href="高教社杯全国大学生数学建模竞赛证书.jpg" target="_blank" rel="noopener noreferrer">高教社杯全国大学生数学建模竞赛证书</a>
+                        </span>
+                    </p>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>教育背景</h2>
+                <div class="editable" contenteditable="true">
+                    <p>2016.9-2020.6&nbsp;&nbsp;长春工业大学&nbsp;&nbsp;本科</p>
+                    <p>2023.9-2026.6&nbsp;&nbsp;长春工业大学&nbsp;&nbsp;硕士研究生</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 王梓蘅. 保留所有权利.</p>
+    </footer>
+</body>
+</html>
